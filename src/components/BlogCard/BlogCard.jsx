@@ -3,7 +3,7 @@ import { CardDiv } from "./CardStyle";
 
 
 const BlogCard = ({username, tag, location, avatar, stats:{followers, views, likes} }) => {
-    return (<div>
+    return (<CardDiv>
     <div>
       <img
         src={avatar}
@@ -28,7 +28,7 @@ const BlogCard = ({username, tag, location, avatar, stats:{followers, views, lik
         <span>{likes}</span>
       </li>
     </ul>
-  </div>)
+  </CardDiv>)
 }
 
 export default BlogCard;
