@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import { CardDiv } from "./CardStyle";
+import { CardDiv, AboutDiv, UlPosition, LiPosition } from "./CardStyle";
 
 
 const BlogCard = ({username, tag, location, avatar, stats:{followers, views, likes} }) => {
     return (<CardDiv>
-    <div>
+    <AboutDiv>
       <img
         src={avatar}
         alt="User avatar"
@@ -12,22 +12,22 @@ const BlogCard = ({username, tag, location, avatar, stats:{followers, views, lik
       <p>{username}</p>
       <p>@{tag}</p>
       <p>{location}</p>
-    </div>
+    </AboutDiv>
   
-    <ul>
-      <li>
+    <UlPosition>
+      <LiPosition>
         <span>Followers</span>
         <span>{followers}</span>
-      </li>
-      <li>
+      </LiPosition>
+      <LiPosition>
         <span>Views</span>
         <span>{views}</span>
-      </li>
-      <li>
+      </LiPosition>
+      <LiPosition>
         <span>Likes</span>
         <span>{likes}</span>
-      </li>
-    </ul>
+      </LiPosition>
+    </UlPosition>
   </CardDiv>)
 }
 
